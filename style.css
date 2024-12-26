@@ -1,0 +1,127 @@
+body {
+  background-color: rgba(200, 35, 42, 1);
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#timer-border {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: auto;
+  height: 440px;
+
+  --color: rgba(20, 150, 76, 1);
+  --angle: 180deg;
+
+  background: conic-gradient(var(--color) 0,
+      var(--color) var(--angle),
+      transparent var(--angle),
+      transparent 90deg);
+
+  /* x length, y length */
+  filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.5));
+}
+
+#timer-center {
+  border-radius: 50%;
+
+  aspect-ratio: 1/1;
+  width: auto;
+  height: 380px;
+
+  background-color: rgba(228, 219, 240, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
+
+.timer-text {
+  color: rgba(27, 27, 27, 1);
+
+  font-family: "Big Shoulders Text", serif;
+
+  /* change design of font depending on size, "none" prevents this */
+  font-optical-sizing: none;
+
+  font-weight: bold;
+  font-style: normal;
+  font-size: 128px;
+}
+
+#timer-time-text {
+  margin-top: 60px;
+}
+
+#timer-status-text {
+  color: rgba(27, 27, 27, 0.3);
+
+  font-size: 32px;
+  font-weight: normal;
+  padding: 10px;
+}
+
+#timer-circles {
+  flex-direction: row;
+}
+
+#timer-circles * {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.timer-circle-hollow {
+  color: rgba(27, 27, 27, 0.3);
+}
+
+.timer-circle-full {
+  color: rgba(27, 27, 27, 1);
+}
+
+#status-text {
+  font-size: 32px;
+}
+
+.menu-buttons {
+  padding: 50px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-buttons>button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  width: auto;
+  height: 100px;
+
+  background-color: rgba(27, 27, 27, 1);
+  border: none;
+  border-radius: 30%;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  filter: drop-shadow(0px 10px rgba(27, 27, 27, 0.5));
+
+  cursor: pointer;
+}
+
+.menu-buttons>button>i {
+  color: rgba(228, 219, 240, 1);
+  font-size: 50px;
+}
