@@ -1,5 +1,7 @@
 body {
-  background-color: rgba(200, 35, 42, 1);
+  --bg-color: rgba(200, 35, 42, 1);
+
+  background-color: var(--bg-color);
 
   width: 100vw;
   height: 100vh;

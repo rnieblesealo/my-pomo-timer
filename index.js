@@ -19,11 +19,21 @@ function startTimer() {
 	if (!timer) {
 		timer = setInterval(runTimer, sec_in_ms);
 
-		startingTime = workMins * min_in_sec * sec_in_ms;
+		startingTime =
+			timeLeft === 0 ? workMins * min_in_sec * sec_in_ms : timeLeft;
 		timeLeft = startingTime;
 
 		console.log("Starting timer!");
 	}
+}
+
+function stopTimer() {
+	if (!timer) {
+		return;
+	}
+
+	clearInterval(timer);
+	timer = undefined;
 }
 
 function runTimer() {
@@ -38,13 +48,42 @@ function runTimer() {
 		const minsLeft = Math.trunc(timeLeft / (sec_in_ms * min_in_sec));
 		const secsLeft = (timeLeft % (sec_in_ms * min_in_sec)) / sec_in_ms;
 
-		timeText.innerHTML = `${minsLeft}:${secsLeft}`;
+		const formattedSecs = `${secsLeft}`.padStart(2, "0");
+
+		timeText.innerHTML = `${minsLeft}:${formattedSecs}`;
 
 		// update radial timer indicator
 		const timerBorder = document.getElementById("timer-border");
 
-		timerBorder.style.setProperty("--angle", `${(timeLeft / startingTime) * 360}deg`);
+		timerBorder.style.setProperty(
+			"--angle",
+			`${(timeLeft / startingTime) * 360}deg`,
+		);
 	}
+}
+
+function pauseTimer() {
+	const playPauseButton = document.getElementById("play-pause-icon");
+
+	if (!timer) {
+		startTimer();
+
+		playPauseButton.classList.add("fa-pause");
+		playPauseButton.classList.remove("fa-play");
+
+		// document.body.style.setProperty("--bg-color", "rgba(200, 35, 42, 1)");
+	} else {
+		stopTimer();
+
+		playPauseButton.classList.remove("fa-pause");
+		playPauseButton.classList.add("fa-play");
+
+		// document.body.style.setProperty("--bg-color", "rgba(115, 3, 8, 1)");
+	}
+}
+
+function onPausePlayClick() {
+	pauseTimer();
 }
 
 startTimer();
