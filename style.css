@@ -3,6 +3,8 @@ body {
 
   background-color: var(--bg-color);
 
+  transition-duration: 0s;
+
   width: 100vw;
   height: 100vh;
 
@@ -20,10 +22,9 @@ body {
   align-items: center;
 }
 
-
 #timer-border {
   border-radius: 50%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   width: auto;
   height: 440px;
 
@@ -35,8 +36,7 @@ body {
       transparent var(--angle),
       transparent 90deg);
 
-
-  transition-duration: 0.1s;
+  transition-duration: 0s;
 
   /* x length, y length */
   filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.5));
@@ -45,14 +45,14 @@ body {
 #timer-center {
   border-radius: 50%;
 
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   width: auto;
   height: 380px;
 
   background-color: rgba(228, 219, 240, 1);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap");
 
 .timer-text {
   color: rgba(27, 27, 27, 1);
@@ -119,8 +119,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1/1;
-  
+  aspect-ratio: 1 / 1;
+
   width: auto;
   height: 100px;
 
@@ -135,7 +135,7 @@ body {
 
   cursor: pointer;
 
-  transition-duration: 0.1s
+  transition-duration: 0.1s;
 }
 
 .menu-buttons>button:hover {
@@ -143,7 +143,7 @@ body {
 }
 
 .menu-buttons>button:active {
-  transform: scale(105%)
+  transform: scale(105%);
 }
 
 .menu-buttons>button>i {

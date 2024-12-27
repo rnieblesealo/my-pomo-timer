@@ -20,6 +20,8 @@
 
 <body>
 
+  <audio src="assets/sounds/click.wav" id="sfx-click"></audio>
+
   <div class="timer">
     <div id="timer-border">
       <div id="timer-center">
@@ -28,10 +30,10 @@
           25:00
         </div>
         <div id="timer-circles">
-          <i class="fa-solid fa-circle timer-circle-hollow"></i>
-          <i class="fa-solid fa-circle timer-circle-hollow"></i>
-          <i class="fa-solid fa-circle timer-circle-hollow"></i>
-          <i class="fa-solid fa-circle timer-circle-hollow"></i>
+          <i class="fa-solid fa-circle timer-circle timer-circle-hollow"></i>
+          <i class="fa-solid fa-circle timer-circle timer-circle-hollow"></i>
+          <i class="fa-solid fa-circle timer-circle timer-circle-hollow"></i>
+          <i class="fa-solid fa-circle timer-circle timer-circle-hollow"></i>
         </div>
         <div class="timer-text" id="timer-status-text">
           work
@@ -45,7 +47,7 @@
     <button type="play-pause" onclick="onPausePlayClick()">
       <i class="fa-solid fa-pause fa-3x" id="play-pause-icon"></i>
     </button>
-    <button type="fast-forward">
+    <button type="skip" onclick="onSkipClick()">
       <i class="fa-solid fa-forward-step fa-3x"></i>
     </button>
   </div>
