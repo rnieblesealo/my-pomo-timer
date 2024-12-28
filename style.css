@@ -1,152 +1,178 @@
 body {
-  --bg-color: rgba(200, 35, 42, 1);
+	--bg-color: rgba(200, 35, 42, 1);
 
-  background-color: var(--bg-color);
+	background-color: var(--bg-color);
 
-  transition-duration: 0s;
+	transition-duration: 0s;
 
-  width: 100vw;
-  height: 100vh;
+	width: 100vw;
+	height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .timer * {
-  position: static;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	position: static;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #timer-border {
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-  width: auto;
-  height: 440px;
+	border-radius: 50%;
+	aspect-ratio: 1 / 1;
+	width: auto;
+	height: 440px;
 
-  --color: rgba(20, 150, 76, 1);
-  --angle: 360deg;
+	--color: rgba(20, 150, 76, 1);
+	--angle: 360deg;
 
-  background: conic-gradient(var(--color) 0,
-      var(--color) var(--angle),
-      transparent var(--angle),
-      transparent 90deg);
+	background: conic-gradient(
+		var(--color) 0,
+		var(--color) var(--angle),
+		transparent var(--angle),
+		transparent 90deg
+	);
 
-  transition-duration: 0s;
+	transition-duration: 0s;
 
-  /* x length, y length */
-  filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.5));
+	/* x length, y length */
+	filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.5));
 }
 
 #timer-center {
-  border-radius: 50%;
+	position: relative;
 
-  aspect-ratio: 1 / 1;
-  width: auto;
-  height: 380px;
+	border-radius: 50%;
 
-  background-color: rgba(228, 219, 240, 1);
+	aspect-ratio: 1 / 1;
+	width: auto;
+	height: 380px;
+
+	background-color: rgba(228, 219, 240, 1);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap");
 
 .timer-text {
-  color: rgba(27, 27, 27, 1);
+	color: rgba(27, 27, 27, 1);
 
-  font-family: "Big Shoulders Text", serif;
+	font-family: "Big Shoulders Text", serif;
 
-  /* change design of font depending on size, "none" prevents this */
-  font-optical-sizing: none;
+	/* change design of font depending on size, "none" prevents this */
+	font-optical-sizing: none;
 
-  font-weight: bold;
-  font-style: normal;
-  font-size: 128px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 128px;
+}
+
+.status-text {
+	color: rgba(27, 27, 27, 0.3);
+
+	font-size: 32px;
+	font-weight: normal;
+	padding: 10px;
+}
+
+.status-icon {
+	color: rgba(27, 27, 27, 0.3);
+}
+
+.hidden * {
+  display: none;
+}
+
+#streak {
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+
+  top: 60px;
 }
 
 #timer-time-text {
-  margin-top: 60px;
-}
-
-#timer-status-text {
-  color: rgba(27, 27, 27, 0.3);
-
-  font-size: 32px;
-  font-weight: normal;
-  padding: 10px;
+	position: absolute;
 }
 
 #timer-circles {
-  flex-direction: row;
+	flex-direction: row;
 }
 
 #timer-circles * {
-  margin-left: 2px;
-  margin-right: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#status {
+	position: absolute;
+	bottom: 30px;
 }
 
 .timer-circle-hollow {
-  color: rgba(27, 27, 27, 0.3);
+	color: rgba(27, 27, 27, 0.3);
 }
 
 .timer-circle-full {
-  color: rgba(27, 27, 27, 1);
+	color: rgba(27, 27, 27, 1);
 }
 
 #status-text {
-  font-size: 32px;
+	font-size: 32px;
 }
 
 .menu-buttons {
-  margin-top: 20px;
-  padding: 20px;
+	margin-top: 20px;
+	padding: 20px;
 
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  align-items: center;
-  justify-content: center;
+	align-items: center;
+	justify-content: center;
 
-  /* setting fixed width + height prevents resizing children from affecting this */
-  width: 300px;
-  height: 100px;
+	/* setting fixed width + height prevents resizing children from affecting this */
+	width: 300px;
+	height: 100px;
 }
 
-.menu-buttons>button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
+.menu-buttons > button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1 / 1;
 
-  width: auto;
-  height: 100px;
+	width: auto;
+	height: 100px;
 
-  background-color: rgba(27, 27, 27, 1);
-  border: none;
-  border-radius: 30%;
+	background-color: rgba(27, 27, 27, 1);
+	border: none;
+	border-radius: 30%;
 
-  margin-left: 15px;
-  margin-right: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
 
-  filter: drop-shadow(0px 10px rgba(27, 27, 27, 0.5));
+	filter: drop-shadow(0px 10px rgba(27, 27, 27, 0.5));
 
-  cursor: pointer;
+	cursor: pointer;
 
-  transition-duration: 0.1s;
+	transition-duration: 0.1s;
 }
 
-.menu-buttons>button:hover {
-  transform: scale(110%);
+.menu-buttons > button:hover {
+	transform: scale(110%);
 }
 
-.menu-buttons>button:active {
-  transform: scale(105%);
+.menu-buttons > button:active {
+	transform: scale(105%);
 }
 
-.menu-buttons>button>i {
-  color: rgba(228, 219, 240, 1);
-  font-size: 50px;
+.menu-buttons > button > i {
+	color: rgba(228, 219, 240, 1);
+	font-size: 50px;
 }
