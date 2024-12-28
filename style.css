@@ -12,6 +12,45 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+}
+
+#settings {
+	color: rgba(228, 219, 240, 1);
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+#settings:hover {
+	transform: rotate(30deg);
+}
+
+.menu {
+	position: absolute;
+
+	top: 0;
+	right: 0;
+
+	background-color: rgba(27, 27, 27, 1);
+
+	height: 100vh;
+
+	transition-duration: 0.3s;
+}
+
+.menu-hidden {
+	width: 0;
+}
+
+.menu-shown {
+	width: 25vw;
 }
 
 .timer * {
@@ -84,16 +123,16 @@ body {
 }
 
 .hidden * {
-  display: none;
+	display: none;
 }
 
 #streak {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  position: absolute;
+	position: absolute;
 
-  top: 60px;
+	top: 60px;
 }
 
 #timer-time-text {

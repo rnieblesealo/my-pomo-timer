@@ -22,6 +22,8 @@ const min_in_sec = 60;
 
 let currentMode = "work";
 
+let settingsMenuShown = false;
+
 function setTime(min, sec) {
   startingTime = min * min_in_sec * sec_in_ms + sec * sec_in_ms;
   timeLeft = startingTime;
@@ -194,3 +196,19 @@ setTime(workMins, workSecs);
 refreshTimerVisual();
 
 startTimer();
+
+const settingsButton = document.getElementById("settings");
+
+settingsButton.addEventListener("mousedown", () => {
+  const settingsMenu = document.getElementById("settings-menu");
+
+  if (!settingsMenuShown) {
+    settingsMenu.classList.remove("menu-hidden");
+    settingsMenu.classList.add("menu-shown");
+  } else {
+    settingsMenu.classList.remove("menu-shown");
+    settingsMenu.classList.add("menu-hidden");
+  }
+
+  settingsMenuShown = !settingsMenuShown;
+});
