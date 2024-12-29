@@ -36,21 +36,87 @@ body {
 	position: absolute;
 
 	top: 0;
-	right: 0;
 
 	background-color: rgba(27, 27, 27, 1);
 
+	width: 400px;
 	height: 100vh;
 
-	transition-duration: 0.3s;
+	transition-duration: 0.2s;
+
+	display: flex;
+	gap: 75px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .menu-hidden {
-	width: 0;
+	right: -100%;
 }
 
 .menu-shown {
-	width: 25vw;
+	right: 0;
+}
+
+.time-input {
+	display: flex;
+	flex-direction: column;
+
+	width: 60%;
+
+	gap: 15px;
+
+	align-items: center;
+}
+
+.time-input-text {
+	color: rgba(228, 219, 240, 1);
+
+	font-family: "Big Shoulders Text", serif;
+	font-size: 24px;
+	font-weight: bold;
+
+	align-self: flex-start;
+}
+
+.time-input-slots {
+	display: flex;
+	flex-direction: row;
+
+	gap: 10px;
+}
+
+.time-input-colon {
+	color: rgba(228, 219, 240, 1);
+
+	font-family: "Big Shoulders Text", serif;
+	font-size: 24px;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time-input-slots > input {
+	flex: 1;
+
+	width: 100%;
+	height: 65px;
+
+	border: none;
+	border-radius: 10px;
+
+	font-family: "Big Shoulders Text", serif;
+	font-weight: bold;
+	font-size: 36px;
+
+	color: rgba(27, 27, 27, 1);
+
+	background-color: rgba(228, 219, 240, 1);
+
+	text-align: center;
 }
 
 .timer * {
