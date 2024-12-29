@@ -75,7 +75,6 @@ body {
 
 	font-family: "Big Shoulders Text", serif;
 	font-size: 24px;
-	font-weight: bold;
 
 	align-self: flex-start;
 }
@@ -114,6 +113,8 @@ body {
 
 	color: rgba(27, 27, 27, 1);
 
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+
 	background-color: rgba(228, 219, 240, 1);
 
 	text-align: center;
@@ -146,7 +147,7 @@ body {
 	transition-duration: 0s;
 
 	/* x length, y length */
-	filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.5));
+	filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.3));
 }
 
 #timer-center {
@@ -262,7 +263,7 @@ body {
 	margin-left: 15px;
 	margin-right: 15px;
 
-	filter: drop-shadow(0px 10px rgba(27, 27, 27, 0.5));
+	filter: drop-shadow(0px 10px rgba(27, 27, 27, 0.3));
 
 	cursor: pointer;
 
