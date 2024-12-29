@@ -1,4 +1,4 @@
-# 🍅Pomodoro Timer
+# 🍅 Pomodoro Timer
 
 ## What It Does 
 
