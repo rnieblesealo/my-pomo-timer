@@ -1,4 +1,4 @@
-# Pomodoro Timer
+# 🍅Pomodoro Timer
 
 ## What It Does 
 
@@ -16,6 +16,10 @@ Basic trio of HTML + CSS + JS w/an assets folder for now
 ## Notes
 
 This is my first frontend project, so you may see some disasters in the code! Learning and getting it done was the main objective here :) 
+
+## Screenshots
+
+![Pomodoro timer in work mode](./github/screenshot.png)
 
 ## Links
 
