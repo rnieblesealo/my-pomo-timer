@@ -3,7 +3,7 @@
 ## What It Does 
 
 The app allows you to:
-- Set a simple Pomodoro timer complete with work, rest, and long rest cycles.
+- Set a simple Pomodoro timer complete with work, rest, and long rest cycles
 - Keep track of how many work-rest intervals you've completed
 - Adjust the length of the different cycles
 
