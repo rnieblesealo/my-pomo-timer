@@ -55,21 +55,21 @@
   </div>
 
   <div class="menu-buttons">
-    <button type="play-pause" onclick="onPausePlayClick()">
+    <button type="play-pause" class="reactive-button" onclick="onPausePlayClick()">
       <i class="fa-solid fa-pause fa-3x" id="play-pause-icon"></i>
     </button>
-    <button type="skip" onclick="onSkipClick()">
+    <button type="skip" class="reactive-button" onclick="onSkipClick()">
       <i class="fa-solid fa-forward-step fa-3x"></i>
     </button>
   </div>
 
-  <div class="menu menu-shown" id="settings-menu">
+  <div class="menu menu-hidden" id="settings-menu">
 
     <div class="time-input">
       <div class="time-input-text">
         Work
       </div>
-      <div class="time-input-slots">
+      <div class="time-input-slots" id="work-inputs">
         <input type="text" class="input-tile" value="2">
         <input type="text" class="input-tile" value="5">
         <div class="time-input-colon">:</div>
@@ -82,7 +82,7 @@
       <div class="time-input-text">
         Rest
       </div>
-      <div class="time-input-slots">
+      <div class="time-input-slots" id="rest-inputs">
         <input type="text" class="input-tile" value="0">
         <input type="text" class="input-tile" value="5">
         <div class="time-input-colon">:</div>
@@ -95,7 +95,7 @@
       <div class="time-input-text">
         Long Rest
       </div>
-      <div class="time-input-slots">
+      <div class="time-input-slots" id="long-rest-inputs">
         <input type="text" class="input-tile" value="1">
         <input type="text" class="input-tile" value="5">
         <div class="time-input-colon">:</div>
@@ -106,11 +106,11 @@
 
     <div class="settings-controls">
 
-      <button type="reset" onclick="">
+      <button type="reset" class="reactive-button" onclick="resetSettings()">
         <i class="fa-solid fa-arrow-rotate-left fa-1x"></i>
       </button>
 
-      <button type="apply" onclick="">
+      <button type="apply" class="reactive-button" onclick="applySettings()">
         <i class="fa-solid fa-check fa-1x"></i>
       </button>
 
