@@ -1,0 +1,48 @@
+body {
+  width: 250px;
+  height: 250px;
+}
+
+.red-bg {
+  background-color: #c72229;
+}
+
+.green-bg {
+  background-color: #13964c;
+}
+
+.white-bg {
+  background-color: #e3dbf0;
+}
+
+#timer,
+#timer * {
+  aspect-ratio: 1 / 1;
+  width: auto;
+  height: 150px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+#timer-circle-bg {
+  border-radius: 50%;
+}
+
+#timer-circle-fg {
+  height: 85%;
+
+  border-radius: 50%;
+}
+
+#timer-text {
+  width: auto;
+  height: auto;
+
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
