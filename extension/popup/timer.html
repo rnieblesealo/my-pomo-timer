@@ -17,17 +17,40 @@
 
 </head>
 
-<body class="red-bg">
+<body class="flex-center red-bg">
 
-  <div id="timer">
-    <div id="timer-circle-bg" class="green-bg">
+  <!-- link sound effect(s) -->
+  <audio src="../assets/sounds/click.wav" id="sfx-click"></audio>
 
-      <div id="timer-circle-fg" class="white-bg">
-        <div id="timer-text">25:00</div>
+  <div id="timer" class="flex-center box-aspect">
+    <div id="timer-circle-bg" class="flex-center box-aspect rounded green-bg">
+      <div id="timer-circle-fg" class="flex-center box-aspect rounded white-bg">
+        <div id="streak" class="flex-center flex-align-row">
+          <div class="small-faded-text"><i class="fa-solid fa-fire"></i></div>
+          <div id="streak-text" class="fit-text small-faded-text">0</div>
+        </div>
+        <div id="timer-text" class="flex-center fit-text big-text">25:00</div>
+        <div id="intervals" class="flex-center flex-align-row">
+          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+        </div>
       </div>
-
     </div>
   </div>
+
+  <div id="timer-buttons" class="flex-center">
+    <button type="play-pause" class="timer-button">
+      <i class="fa-solid fa-pause fa-2x"></i>
+    </button>
+    <button type="skip" class="timer-button">
+      <i class="fa-solid fa-forward-step fa-2x"></i>
+    </button>
+  </div>
+
+  <!-- link javascript -->
+  <script src="timer.js"></script>
 
 </body>
 

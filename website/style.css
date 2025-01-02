@@ -1,316 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap");
+
 body {
-  --bg-color: rgba(200, 35, 42, 1);
+	--bg-color: rgba(200, 35, 42, 1);
 
-  background-color: var(--bg-color);
+	background-color: var(--bg-color);
 
-  transition-duration: 0s;
+	transition-duration: 0s;
 
-  width: 100vw;
-  height: 100vh;
+	width: 100vw;
+	height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  position: relative;
+	position: relative;
 
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #settings {
-  color: rgba(228, 219, 240, 1);
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  transition-duration: 0.3s;
+	color: rgba(228, 219, 240, 1);
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+	transition-duration: 0.3s;
 }
 
 #settings:hover {
-  transform: rotate(30deg);
+	transform: rotate(30deg);
 }
 
 .menu {
-  position: absolute;
+	position: absolute;
 
-  top: 0;
+	top: 0;
 
-  background-color: rgba(27, 27, 27, 1);
+	background-color: rgba(27, 27, 27, 1);
 
-  width: 400px;
-  height: 100vh;
+	width: 400px;
+	height: 100vh;
 
-  transition-duration: 0.2s;
+	transition-duration: 0.2s;
 
-  display: flex;
-  gap: 75px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	gap: 75px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .menu-hidden {
-  right: -100%;
+	right: -100%;
 }
 
 .menu-shown {
-  right: 0;
+	right: 0;
 }
 
 .time-input {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  width: 60%;
-  height: 100px;
+	width: 60%;
+	height: 100px;
 
-  gap: 15px;
+	gap: 15px;
 
-  align-items: center;
+	align-items: center;
 }
 
 .time-input-text {
-  color: rgba(228, 219, 240, 1);
+	color: rgba(228, 219, 240, 1);
 
-  font-family: "Big Shoulders Text", serif;
-  font-size: 24px;
+	font-family: "Big Shoulders Text", serif;
+	font-size: 24px;
 
-  align-self: flex-start;
+	align-self: flex-start;
 }
 
 .time-input-slots {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  gap: 10px;
+	gap: 10px;
 }
 
 .time-input-colon {
-  color: rgba(228, 219, 240, 1);
+	color: rgba(228, 219, 240, 1);
 
-  font-family: "Big Shoulders Text", serif;
-  font-size: 24px;
-  font-weight: bold;
+	font-family: "Big Shoulders Text", serif;
+	font-size: 24px;
+	font-weight: bold;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.time-input-slots>input {
-  flex: 1;
+.time-input-slots > input {
+	flex: 1;
 
-  width: 100%;
-  height: 65px;
+	width: 100%;
+	height: 65px;
 
-  border: none;
-  border-radius: 10px;
+	border: none;
+	border-radius: 10px;
 
-  font-family: "Big Shoulders Text", serif;
-  font-weight: bold;
-  font-size: 36px;
+	font-family: "Big Shoulders Text", serif;
+	font-weight: bold;
+	font-size: 36px;
 
-  color: rgba(27, 27, 27, 1);
+	color: rgba(27, 27, 27, 1);
 
-  box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+	box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
 
-  background-color: rgba(228, 219, 240, 1);
+	background-color: rgba(228, 219, 240, 1);
 
-  text-align: center;
+	text-align: center;
 }
 
 .settings-controls {
-  width: 60%;
-  height: 100px;
+	width: 60%;
+	height: 100px;
 
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  justify-content: center;
-  align-items: flex-end;
+	justify-content: center;
+	align-items: flex-end;
 
-  gap: 24px;
+	gap: 24px;
 }
 
-.settings-controls>button {
-  flex: 1;
-  padding: 5px;
+.settings-controls > button {
+	flex: 1;
+	padding: 5px;
 
-  height: 40px;
+	height: 40px;
 
-  background-color: rgba(228, 219, 240, 1);
-  color: rgba(27, 27, 27, 1);
+	background-color: rgba(228, 219, 240, 1);
+	color: rgba(27, 27, 27, 1);
 
-  border: none;
-  border-radius: 8px;
+	border: none;
+	border-radius: 8px;
 
-  box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+	box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
 }
 
-.settings-controls>button>i {
-  font-size: 24px;
+.settings-controls > button > i {
+	font-size: 24px;
 }
 
 .timer * {
-  position: static;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	position: static;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #timer-border {
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-  width: auto;
-  height: 440px;
+	border-radius: 50%;
+	aspect-ratio: 1 / 1;
+	width: auto;
+	height: 440px;
 
-  --color: rgba(20, 150, 76, 1);
-  --angle: 360deg;
+	--color: rgba(20, 150, 76, 1);
+	--angle: 360deg;
 
-  background: conic-gradient(var(--color) 0,
-      var(--color) var(--angle),
-      transparent var(--angle),
-      transparent 90deg);
+	background: conic-gradient(
+		var(--color) 0,
+		var(--color) var(--angle),
+		transparent var(--angle),
+		transparent 90deg
+	);
 
-  transition-duration: 0s;
+	transition-duration: 0s;
 
-  /* x length, y length */
-  filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.3));
+	/* x length, y length */
+	filter: drop-shadow(0px 12.5px rgba(27, 27, 27, 0.3));
 }
 
 #timer-center {
-  position: relative;
+	position: relative;
 
-  border-radius: 50%;
+	border-radius: 50%;
 
-  aspect-ratio: 1 / 1;
-  width: auto;
-  height: 380px;
+	aspect-ratio: 1 / 1;
+	width: auto;
+	height: 380px;
 
-  background-color: rgba(228, 219, 240, 1);
+	background-color: rgba(228, 219, 240, 1);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap");
-
 .timer-text {
-  color: rgba(27, 27, 27, 1);
+	color: rgba(27, 27, 27, 1);
 
-  font-family: "Big Shoulders Text", serif;
+	font-family: "Big Shoulders Text", serif;
 
-  /* change design of font depending on size, "none" prevents this */
-  font-optical-sizing: none;
+	/* change design of font depending on size, "none" prevents this */
+	font-optical-sizing: none;
 
-  font-weight: bold;
-  font-style: normal;
-  font-size: 128px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 128px;
 }
 
 .status-text {
-  color: rgba(27, 27, 27, 0.3);
+	color: rgba(27, 27, 27, 0.3);
 
-  font-size: 32px;
-  font-weight: normal;
-  padding: 10px;
+	font-size: 32px;
+	font-weight: normal;
+	padding: 10px;
 }
 
 .status-icon {
-  color: rgba(27, 27, 27, 0.3);
+	color: rgba(27, 27, 27, 0.3);
 }
 
 .hidden * {
-  display: none;
+	display: none;
 }
 
 #streak {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  position: absolute;
+	position: absolute;
 
-  top: 60px;
+	top: 60px;
 }
 
 #timer-time-text {
-  position: absolute;
+	position: absolute;
 }
 
 #timer-circles {
-  flex-direction: row;
+	flex-direction: row;
 }
 
 #timer-circles * {
-  margin-left: 2px;
-  margin-right: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 #status {
-  position: absolute;
-  bottom: 30px;
+	position: absolute;
+	bottom: 30px;
 }
 
 .timer-circle-hollow {
-  color: rgba(27, 27, 27, 0.3);
+	color: rgba(27, 27, 27, 0.3);
 }
 
 .timer-circle-full {
-  color: rgba(27, 27, 27, 1);
+	color: rgba(27, 27, 27, 1);
 }
 
 #status-text {
-  font-size: 32px;
+	font-size: 32px;
 }
 
 .menu-buttons {
-  margin-top: 20px;
-  padding: 20px;
+	margin-top: 20px;
+	padding: 20px;
 
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  align-items: center;
-  justify-content: center;
+	align-items: center;
+	justify-content: center;
 
-  /* setting fixed width + height prevents resizing children from affecting this */
-  width: 300px;
-  height: 100px;
+	/* setting fixed width + height prevents resizing children from affecting this */
+	width: 300px;
+	height: 100px;
 }
 
-.menu-buttons>button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
+.menu-buttons > button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1 / 1;
 
-  width: auto;
-  height: 100px;
+	width: auto;
+	height: 100px;
 
-  background-color: rgba(27, 27, 27, 1);
-  border: none;
-  border-radius: 30%;
+	background-color: rgba(27, 27, 27, 1);
+	border: none;
+	border-radius: 30%;
 
-  margin-left: 15px;
-  margin-right: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
 
-  filter: drop-shadow(0px 10px rgba(27, 27, 27, 0.3));
+	filter: drop-shadow(0px 10px rgba(27, 27, 27, 0.3));
 }
 
-.menu-buttons>button>i {
-  color: rgba(228, 219, 240, 1);
-  font-size: 50px;
+.menu-buttons > button > i {
+	color: rgba(228, 219, 240, 1);
+	font-size: 50px;
 }
 
 .reactive-button {
-  cursor: pointer;
-  transition-duration: 0.1s;
+	cursor: pointer;
+	transition-duration: 0.1s;
 }
 
 .reactive-button:hover {
-  transform: scale(110%);
+	transform: scale(110%);
 }
 
 .reactive-button:active {
-  transform: scale(105%);
+	transform: scale(105%);
 }
