@@ -23,7 +23,7 @@
   <audio src="../assets/sounds/click.wav" id="sfx-click"></audio>
 
   <div id="timer" class="flex-center box-aspect">
-    <div id="timer-circle-bg" class="flex-center box-aspect rounded green-bg">
+    <div id="timer-circle-bg" class="flex-center box-aspect rounded">
       <div id="timer-circle-fg" class="flex-center box-aspect rounded white-bg">
         <div id="streak" class="flex-center flex-align-row">
           <div class="small-faded-text"><i class="fa-solid fa-fire"></i></div>
@@ -31,14 +31,16 @@
         </div>
         <div id="timer-text" class="flex-center fit-text big-text">25:00</div>
         <div id="intervals" class="flex-center flex-align-row">
-          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
-          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
-          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
-          <div class="interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+          <div class="ic interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+          <div class="ic interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+          <div class="ic interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
+          <div class="ic interval-circle-hollow"><i class="fa-solid fa-circle fa-1x"></i></div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- WARNING: Using the onclick attribute creates vuln. to XSS, use event listeners instead -->
 
   <div id="timer-buttons" class="flex-center">
     <button type="play-pause" class="timer-button">
@@ -46,6 +48,9 @@
     </button>
     <button type="skip" class="timer-button">
       <i class="fa-solid fa-forward-step fa-2x"></i>
+    </button>
+    <button type="restart" class="timer-button">
+      <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
     </button>
   </div>
 

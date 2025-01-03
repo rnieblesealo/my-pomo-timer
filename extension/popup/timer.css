@@ -1,136 +1,150 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap");
 
 body {
-	width: 250px;
-	height: 250px;
+  width: 250px;
+  height: 250px;
 
-	gap: 25px;
+  gap: 25px;
 }
 
 .flex-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .flex-align-row {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .box-aspect {
-	aspect-ratio: 1 / 1;
-	width: auto;
-	height: auto;
+  aspect-ratio: 1 / 1;
+  width: auto;
+  height: auto;
 }
 
 .fit-text {
-	width: auto;
-	height: auto;
+  width: auto;
+  height: auto;
 }
 
 .rounded {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .red-bg {
-	background-color: #c72229;
+  background-color: #c72229;
 }
 
 .green-bg {
-	background-color: #13964c;
+  background-color: #13964c;
+}
+
+.blue-bg {
+  background-color: #3a64da;
 }
 
 .white-bg {
-	background-color: #e3dbf0;
+  background-color: #e3dbf0;
 }
 
 .big-text {
-	font-family: "Big Shoulders Text", serif;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 32px;
-	/* Disable changing font design for diff. sizes */
-	font-optical-sizing: none;
+  font-family: "Big Shoulders Text", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  /* Disable changing font design for diff. sizes */
+  font-optical-sizing: none;
 }
 
 .small-faded-text {
-	font-family: "Big Shoulders Text", serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	/* Disable changing font design for diff. sizes */
-	font-optical-sizing: none;
+  font-family: "Big Shoulders Text", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  /* Disable changing font design for diff. sizes */
+  font-optical-sizing: none;
 
-	color: rgba(27, 27, 27, 0.3);
+  color: rgba(27, 27, 27, 0.3);
 }
 
 .timer-button {
-	aspect-ratio: 1 / 1;
-	width: auto;
-	height: 45px;
+  aspect-ratio: 1 / 1;
+  width: auto;
+  height: 45px;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	border: none;
-	border-radius: 30%;
+  border: none;
+  border-radius: 30%;
 
-	background-color: #1b1b1b;
+  background-color: #1b1b1b;
 
-	box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
+
   transition-duration: 0.15s;
 }
 
 .timer-button:hover {
-  transform: scale(110%) 
+  transform: scale(110%);
 }
 
 .timer-button:active {
-  transform: scale(90%) 
+  transform: scale(100%);
 }
 
 /* Children of timer btns. are assumed to be icons */
-.timer-button > * {
-	color: #e2dcee;
+.timer-button>* {
+  color: #e2dcee;
 }
 
 .interval-circle-hollow {
-	font-size: 7px;
-	color: rgba(27, 27, 27, 0.3);
+  font-size: 7px;
+  color: rgba(27, 27, 27, 0.3);
 }
 
 .interval-circle-full {
-	font-size: 10px;
-	color: rgba(27, 27, 27, 1);
+  font-size: 9px;
+  color: rgba(27, 27, 27, 1);
 }
 
 #timer,
-#timer > * {
-	height: 150px;
+#timer>* {
+  height: 150px;
 }
 
 #timer-circle-bg {
-	box-shadow: 0px 7.5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 7.5px rgba(0, 0, 0, 0.1);
+
+  --color: #13964c;
+  --angle: 360deg;
+
+  /* TODO: Try to understand what's going on here to avoid skill issues :] */
+  background: conic-gradient(var(--color) 0,
+      var(--color) var(--angle),
+      transparent var(--angle),
+      transparent 90deg);
 }
 
 #timer-circle-fg {
-	height: 85%;
-	gap: 5px;
+  height: 85%;
+  gap: 5px;
 }
 
 #timer-buttons {
-	flex-direction: row;
-	gap: 5px;
+  flex-direction: row;
+  gap: 5px;
 }
 
 #streak {
-	gap: 3px;
+  gap: 3px;
 }
 
 #intervals {
-	gap: 2px;
+  height: 10px;
+  gap: 2px;
 }
