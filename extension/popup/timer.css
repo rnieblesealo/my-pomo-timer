@@ -5,6 +5,9 @@ body {
   height: 250px;
 
   gap: 25px;
+
+  /* Disable horiz. scrolling */
+  overflow: hidden;
 }
 
 .flex-center {
@@ -48,6 +51,10 @@ body {
 
 .white-bg {
   background-color: #e3dbf0;
+}
+
+.black-bg {
+  background-color: #1b1b1b;
 }
 
 .big-text {
@@ -147,4 +154,54 @@ body {
 #intervals {
   height: 10px;
   gap: 2px;
+}
+
+button[type="settings"] {
+  aspect-ratio: 1 / 1;
+  width: auto;
+  height: auto;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #e3dbf0;
+
+  background: none;
+  border: none;
+
+  transition-duration: 0.1s;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+button[type="settings"]:hover {
+  transform: rotate(30deg) scale(110%);
+}
+
+button[type="settings"]:active {
+  transform: rotate(30deg) scale(100%);
+}
+
+.menu {
+  position: absolute;
+
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transition-duration: 0.25s;
+}
+
+.menu-shown {
+  right: 0;
+}
+
+.menu-hidden {
+  right: -100%;
 }
